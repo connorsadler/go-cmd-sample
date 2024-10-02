@@ -9,15 +9,18 @@ The difference is, when running Java you usually specify the entrypoint class, w
 ## Step 1 - when you have a single "cmd/main.go" and no other .go files
 (see "step_1" branch for complete code)
 
-1.1. Put your main.go into cmd  
+1.1. We place our "main.go" into the "cmd" directory.  
+See the "step_1" branch for the code
 
 1.2. Use this command to build the binary:  
-    `go build -o go-cmd-sample-app ./...`
+
+    go build -o go-cmd-sample-app ./...
 
 Notice the triple dot, which is a bit unusual. In Go, "x/..." means "every path under x/"
 
 1.3. Run your app with:  
-    `./go-cmd-sample-app`
+
+    ./go-cmd-sample-app
 
 References:
 - go build: [here](https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies)
@@ -44,23 +47,23 @@ import (
 )
 ```
 
-2.3. Try to build using the same command as in Step 1
-    `go build -o go-cmd-sample-app ./...`
+2.3. Try to build using the same command as in Step 1  
+
+    go build -o go-cmd-sample-app ./...
 
 You'll see an error like this:
 ```
 go: cannot write multiple packages to non-directory go-cmd-sample-app
 ```
 
-This seems to be a quirk of Go when using a wildcard, so instead we'll use a specific name on the build command.  
-Use this command to build the binary:  
-    `go build -o go-cmd-sample-app cmd/main.go`
+This seems to be a quirk of Go when using a wildcard, so instead we'll 
+use a specific name on the build command, as follows:  
+
+    go build -o go-cmd-sample-app cmd/main.go
 
 2.5. Run your app with:  
-    `./go-cmd-sample-app`
+
+    ./go-cmd-sample-app
 
 You'll see the output, including the string returned from the call out to the function in the 'useful' package.
-
-
-
 
