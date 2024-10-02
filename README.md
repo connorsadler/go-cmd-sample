@@ -19,6 +19,9 @@ The difference is, however, when running Java you usually specify the entrypoint
 1.3. Run your app with:
     ./go-cmd-sample-app
 
+References:
+- go build: https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies
+
 ## Step 2 - you then want more packages to add more code, and call those packages from your "main.go"
 
 TODO
