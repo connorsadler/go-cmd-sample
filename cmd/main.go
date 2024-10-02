@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	// usefulcode "go-cmd-sample"
+	useful "go-cmd-sample"
 )
 
 func main() {
 	fmt.Println("go-cmd-sample - main running")
 
-	// usefulResult := usefulcode.MyUsefulFunction()
-	// fmt.Printf("usefulResult: %s\n", usefulResult)
+	usefulResult := useful.MyUsefulFunction()
+	fmt.Printf("usefulResult: %s\n", usefulResult)
 
 	fmt.Println("go-cmd-sample - main done")
 }
